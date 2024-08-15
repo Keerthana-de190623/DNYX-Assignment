@@ -1,0 +1,141 @@
+JavaScript Fundamentals Assignment
+
+1.What is JavaScript?
+JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. 
+It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc.
+
+2.Variables and Types:
+(Declare a variable named userAge and assign it a numerical value representing someone's age.
+Declare another variable named userName and assign it a string value representing a person's name.
+Output both variables using console.log().)
+ var userAge = 30;
+ var userName = "Sarika";
+ console.log()
+
+3.Comments in JavaScript:
+(Write a multi-line comment explaining the purpose of a function you create in the next step.)
+
+Multi-line comments start with /* and end with */ . Any text between /* and */ will be ignored by JavaScript.
+/* multi-line comment in javascript.
+    It is multi line comment.  
+    It will not be displayed upon 
+    execution of this code. 
+*/ 
+console.log("Multi-line comment in javascript");
+
+4.Operations:
+(Create two variables, num1 and num2, and assign them numerical values.
+Perform addition, subtraction, multiplication, and division operations on these variables.
+Display the results using console.log().)
+//subtraction
+function sub() {
+    let num1= 10;
+    let num2 = 20;
+    /* let z = num1- num2;
+    console.log(z); */
+
+    let z = num1- num2;
+    console.log(z);
+}
+ sub();
+
+//addition
+function add() {
+    let num1= 10;
+    let num2 = 20;
+    /* let z = num1+ num2;
+    console.log(z); */
+
+    let z = num1+ num2;
+    console.log(z);
+}
+ add();
+
+//multiplication
+function mul() {
+    let num1= 10;
+    let num2 = 20;
+    /* let z = num1* num2;
+    console.log(z); */
+
+    let z = num1* num2;
+    console.log(z);
+}
+ mul();
+
+//division
+function div() {
+    let num1= 10;
+    let num2 = 20;
+    /* let z = num1/ num2;
+    console.log(z); */
+
+    let z = num1/ num2;
+    console.log(z);
+}
+ div();
+
+5.Data Types:
+(Create variables to represent different data types: string, number, boolean, and an array.
+Provide examples and explain each data type.)
+let userName = "Harini";
+let userAge = 20;
+let x = true;
+const cars = ["green", "blue", "red"];
+
+6.Functions in JavaScript:
+
+(Write a function named greetUser that takes a name parameter and returns a greeting message.
+Call the function with a sample name and display the result using console.log().)
+
+function greetUser(name) {
+    return "Hello, " + name + "! Welcome!";
+}
+
+var sName = "John";
+var greetMessage = greetUser(sName);
+
+console.log(greetMessage);
+
+7.if Else in JavaScript:
+(Create a variable named temperature and assign it a numerical value.
+Write an if-else statement to check if the temperature is greater than 30. Output a message accordingly.)
+
+let temperature = 25;
+
+if (temperature > 30) {
+  console.log("It's hot outside!");
+} else {
+  console.log("It's cold outside!.");
+}
+
+
+8.FOR LOOP:
+(Use a for loop to print the numbers from 1 to 5 in the console.)
+for(let i=1;i<=5;i++)
+{
+   console.log(i);
+}
+
+9.Loose vs Strict Equality:
+(Explain the difference between loose equality (==) and strict equality (===) with examples.)
+
+The loose equality operator ‘==’ allows us to compare two or more operands by converting their value to a common type first and then checking for the equality between them.
+‘==’ operator: In Javascript, the ‘==’ operator is also known as the loose equality operator which is mainly used to compare two values on both sides and then return true or false.
+ This operator checks equality only after converting both the values to a common type
+ example:
+    console.log(21 == 21);
+    console.log(21 == '21');
+ output:true
+            true
+strict equality operator ‘===’ allows us to compare two or more operands by checking the equality between the values as well as their types .
+ It returns true only if the values and the type both match with the other operand.
+ example:
+    console.log('hello world' === 'hello world');
+    console.log(true === true);
+    console.log(5 === 5);
+output:
+    true
+    true
+    true
+
