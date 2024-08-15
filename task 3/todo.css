@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.card{
+    background-image: url("https://ik.imagekit.io/w7xwvn6pu/todolistbg.jpg?updatedAt=1705460746671");
+    height: 640px;
+    width: 360px;
+    background-size: contain;
+}
+
+.card1{
+    text-align: center;
+}
+
+.card3{
+    text-align: center;
+}
+
+.heading{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.content{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.btn{
+    background-color: orange;
+    height: 40px;
+    width: 80px;
+    color: white;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
