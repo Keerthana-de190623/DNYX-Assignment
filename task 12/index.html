@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacon Ipsum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .container{
+            text-align: center;
+        }
+        #bacon-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        #refresh-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="font-family-Arial, sans-serif m-5 p-5 flex justify-content-center align-items-center h-100vh bg-color-#f4f4f4;">
+    <div class="container ">
+        <p id="bacon-text">Fetching delicious bacon ipsum...</p>
+        <button id="refresh-btn">Refresh</button>
+    </div>
+
+    <script>
+        const baconTextElement = document.getElementById('bacon-text');
+        const refreshBtn = document.getElementById('refresh-btn');
+
+        async function fetchBaconIpsum() {
+            try {
+                const response = await fetch('https://baconipsum.com/api/?type=all');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                const data = await response.json();
+                const baconText = data[0];
+                baconTextElement.textContent = baconText;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                baconTextElement.textContent = 'Failed to fetch bacon ipsum. Please try again later.';
+            }
+        }
+
+        refreshBtn.addEventListener('click', fetchBaconIpsum);
+
+        // Initial fetch when the page loads
+        fetchBaconIpsum();
+    </script>
+</body>
+</html>
